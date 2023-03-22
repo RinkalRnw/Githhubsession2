@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <style>
+        #btn2{
+            position: sticky;
+    bottom: 12px;
+    left: 1000px;
+    color: rebeccapurple;
+
+        }
+        .bgyellow{
+            background-color: yellow;
+        }
+        .bgred{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="">Name:</label>
+        <input type="text" id="username" name="username" minlength="2" maxlength="10" placeholder="please enter surname" required>
+        <br><br>
+
+        <label for="">Gender:</label>
+        <input type="radio" id="g1" name="g1" value="male">Male
+        <input type="radio" id="g1" name="g1" value="female">Female <br><br>
+
+        <label for="">Age:</label>
+        <input type="number" id="age" name="age">
+        <br><br>
+        <input type="button" value="Save" name="btn1" id="btn1">
+    </form>
+<br>
+<br>
+    <table border="1" id="userData" class="bgred">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+        </tr>
+    </table>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, impedit error explicabo officiis debitis dicta magnam tempore dolorem in saepe reprehenderit fugiat! Dolore possimus culpa facere reiciendis eum provident vitae itaque, nulla illo quibusdam cum hic eligendi autem beatae, qui unde quis doloribus iusto vero assumenda in aut ducimus molestiae incidunt. Rem maxime earum sit modi, minima quam repellendus commodi dolorum ipsa, dolor animi eius cupiditate voluptates sint quibusdam. Qui sit ducimus itaque odio unde, laborum atque quasi vero quae assumenda aperiam velit facilis beatae quidem amet! Error, assumenda ipsa! Quo velit laudantium animi repudiandae temporibus ab illo vel! Ratione?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, impedit error explicabo officiis debitis dicta magnam tempore dolorem in saepe reprehenderit fugiat! Dolore possimus culpa facere reiciendis eum provident vitae itaque, nulla illo quibusdam cum hic eligendi autem beatae, qui unde quis doloribus iusto vero assumenda in aut ducimus molestiae incidunt. Rem maxime earum sit modi, minima quam repellendus commodi dolorum ipsa, dolor animi eius cupiditate voluptates sint quibusdam. Qui sit ducimus itaque odio unde, laborum atque quasi vero quae assumenda aperiam velit facilis beatae quidem amet! Error, assumenda ipsa! Quo velit laudantium animi repudiandae temporibus ab illo vel! Ratione?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, impedit error explicabo officiis debitis dicta magnam tempore dolorem in saepe reprehenderit fugiat! Dolore possimus culpa facere reiciendis eum provident vitae itaque, nulla illo quibusdam cum hic eligendi autem beatae, qui unde quis doloribus iusto vero assumenda in aut ducimus molestiae incidunt. Rem maxime earum sit modi, minima quam repellendus commodi dolorum ipsa, dolor animi eius cupiditate voluptates sint quibusdam. Qui sit ducimus itaque odio unde, laborum atque quasi vero quae assumenda aperiam velit facilis beatae quidem amet! Error, assumenda ipsa! Quo velit laudantium animi repudiandae temporibus ab illo vel! Ratione?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, impedit error explicabo officiis debitis dicta magnam tempore dolorem in saepe reprehenderit fugiat! Dolore possimus culpa facere reiciendis eum provident vitae itaque, nulla illo quibusdam cum hic eligendi autem beatae, qui unde quis doloribus iusto vero assumenda in aut ducimus molestiae incidunt. Rem maxime earum sit modi, minima quam repellendus commodi dolorum ipsa, dolor animi eius cupiditate voluptates sint quibusdam. Qui sit ducimus itaque odio unde, laborum atque quasi vero quae assumenda aperiam velit facilis beatae quidem amet! Error, assumenda ipsa! Quo velit laudantium animi repudiandae temporibus ab illo vel! Ratione?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, impedit error explicabo officiis debitis dicta magnam tempore dolorem in saepe reprehenderit fugiat! Dolore possimus culpa facere reiciendis eum provident vitae itaque, nulla illo quibusdam cum hic eligendi autem beatae, qui unde quis doloribus iusto vero assumenda in aut ducimus molestiae incidunt. Rem maxime earum sit modi, minima quam repellendus commodi dolorum ipsa, dolor animi eius cupiditate voluptates sint quibusdam. Qui sit ducimus itaque odio unde, laborum atque quasi vero quae assumenda aperiam velit facilis beatae quidem amet! Error, assumenda ipsa! Quo velit laudantium animi repudiandae temporibus ab illo vel! Ratione?</p><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, impedit error explicabo officiis debitis dicta magnam tempore dolorem in saepe reprehenderit fugiat! Dolore possimus culpa facere reiciendis eum provident vitae itaque, nulla illo quibusdam cum hic eligendi autem beatae, qui unde quis doloribus iusto vero assumenda in aut ducimus molestiae incidunt. Rem maxime earum sit modi, minima quam repellendus commodi dolorum ipsa, dolor animi eius cupiditate voluptates sint quibusdam. Qui sit ducimus itaque odio unde, laborum atque quasi vero quae assumenda aperiam velit facilis beatae quidem amet! Error, assumenda ipsa! Quo velit laudantium animi repudiandae temporibus ab illo vel! Ratione?</p>
+
+    <button id="btn2">Top</button>
+    <script>
+        $('#btn2').hide();
+$(window).scroll(function(){
+   if($(this).scrollTop() > 1){
+    $('#btn2').show();
+   } else {
+    $('#btn2').hide();
+   }
+    // console.log($(this).scrollTop());
+});
+
+$('#btn2').click(function(){
+    document.documentElement.scrollTop = 0;
+});
+
+        $('#btn1').click(function(){
+
+            $('#userData').removeClass('bgred').addClass('bgyellow');
+
+            // $('#userData').attr('bgcolor','red');
+            var name = $('#username').val();
+            var age =  $('#age').val();
+            var gender =  $('#g1').val();
+
+
+            $('#userData').append('<tr><td>'+name+'</td><td>'+age+'</td><td>'+gender+'</td></tr>');
+             $('#username').val('');
+            $('#age').val('');
+            $('#g1').val('');
+        });
+    </script>
+</body>
+</html>
